@@ -1,0 +1,107 @@
+body {
+    /*background: #343C4C;*/
+    min-width: 800px;
+    min-height: 400px;
+}
+.flat-anim {
+    display: block;
+    position: absolute;
+    width:264px;
+    height: 265px;
+    background: #6FDABB;
+    border-radius: 42px;
+    top:50%;
+    left:50%;
+    margin: -132px 0 0 -132px;
+    -webkit-box-shadow:0 12px 0 -6px rgba(0,0,0,0.2);
+    box-shadow:0 12px 0 -6px rgba(0,0,0,0.2);
+}
+
+.flat-anim::before {
+    content: "";
+    background-color: #282e3a;
+    width:26px;
+    height:26px;
+    position: absolute;
+    left:20px;
+    top:20px;
+    border-radius:26px;
+}
+
+.flat-anim::after {
+    content:"";
+    background-color:#C72E31;
+    width:44px;
+    height:20px;
+    border-radius: 8px;
+    position: absolute;
+    top:20px;
+    right:24px;
+}
+
+.eye {
+    width:38px;
+    height:38px;
+    background-color: #1E3E3C;
+    border-radius:38px;
+    display: block;
+    margin:60px auto;
+    position: relative;
+    -webkit-box-shadow:0 0 0 22px #1A4B46, 0 0 0 30px #1E3E3C, 0 0 0 45px #ecf0f1, 0 10px 0 45px rgba(0,0,0,0.2);
+    box-shadow:0 0 0 22px #1A4B46, 0 0 0 30px #1E3E3C, 0 0 0 45px #ecf0f1, 0 10px 0 45px rgba(0,0,0,0.2);
+    z-index: 20;
+}
+
+.eye::before {
+    content:"";
+    width:30px;
+    height:30px;
+    background-color: #568E7C;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    border-radius: 30px;
+}
+.eye::after {
+    content:"";
+    width:16px;
+    height:16px;
+    border-radius:16px;
+    background-color: #266C67;
+    position: absolute;
+    top:30px;
+    left:30px;
+}
+/*bottom section*/
+.bottom {
+    width:264px;
+    height:112px;
+    background-color: #D94C4E;
+    display: block;
+    border-radius:0 0 42px 42px;
+    border-top:15px solid #C72E31;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index: 10;
+}
+.bottom::before {
+    content:"";
+    width:140px;
+    height:30px;
+    background-color: #282e3a;
+    display: block;
+    margin:14px auto;
+}
+.bottom::after {
+    content:"";
+    width:96px;
+    height:70px;
+    display: block;
+    position: absolute;
+    top:30px;
+    left:84px;
+    background-color: #ecf0f1;
+    border-top:8px solid #c3d1dd;
+    border-bottom:14px solid #C72e31;
+}
