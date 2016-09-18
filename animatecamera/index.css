@@ -1,5 +1,5 @@
 body {
-    /*background: #343C4C;*/
+    background: #343C4C;
     min-width: 800px;
     min-height: 400px;
 }
@@ -104,4 +104,99 @@ body {
     background-color: #ecf0f1;
     border-top:8px solid #c3d1dd;
     border-bottom:14px solid #C72e31;
+}
+
+/*上边一半的动画*/
+.eye,.flat-anim:before,.flat-anim:after {
+    -webkit-animation:eyeAnimation 5s infinite;
+    animation:eyeAnimation 5s infinite;
+}
+
+.flat-anim:before {
+    -webkit-animation-delay:50ms;
+    -moz-animation-delay:50ms;
+    -o-animation-delay:50ms;
+    animation-delay:50ms;
+}
+
+.flat-anim:after {
+    -webkit-animation-delay:50ms;
+    -moz-animation-delay:50ms;
+    -o-animation-delay:50ms;
+    animation-delay:50ms;
+}
+
+@keyframes eyeAnimation {
+    0% {opacity:0;-webkit-transform:scale(0.1);transform:scale(0.1);}
+    12% {opacity:0;-webkit-transform:scale(0.1);transform:scale(0.1);}
+    13% {opacity:1;-webkit-transform:scale(0.1);transform:scale(0.1);}
+    20% {opacity:1;-webkit-transform:scale(1.4);transform:scale(1.4);}
+    25% {-webkit-transform:scale(1);transform:scale(1);}
+    95% {opacity:1;-webkit-transform:scale(1);transform:scale(1);}
+    100% {opacity:0;-webkit-transform:scale(0.1);transform:scale(0.1);}
+}
+
+/*下边一半的动画*/
+.bottom:before {
+    -webkit-animation:bottomAnimation 5s infinite;
+    animation:bottomAnimation 5s infinite;
+}
+
+@-webkit-keyframes bottomAnimation {
+    0% {opacity:0;width:0;}
+    21% {opacity:0;width:0;}
+    22% {opacity:1;width:8px;}
+    25% {opacity:1;width:165px;}
+    26% {opacity:1;width:140px;}
+    95% {opacity:1;width:140px;}
+    96% {opacity:0;width:0;}
+    100% {opacity:0;width:0;}
+}
+@-moz-keyframes bottomAnimation {
+    0% {opacity:0;width:0;}
+    21% {opacity:0;width:0;}
+    22% {opacity:1;width:8px;}
+    25% {opacity:1;width:165px;}
+    26% {opacity:1;width:140px;}
+    95% {opacity:1;width:140px;}
+    96% {opacity:0;width:0;}
+    100% {opacity:0;width:0;}
+}
+@keyframes bottomAnimation {
+    0% {opacity:0;width:0;}
+    21% {opacity:0;width:0;}
+    22% {opacity:1;width:8px;}
+    25% {opacity:1;width:165px;}
+    26% {opacity:1;width:140px;}
+    95% {opacity:1;width:140px;}
+    96% {opacity:0;width:0;}
+    100% {opacity:0;width:0;}
+}
+
+.bottom:after {
+    -webkit-animation:bottomAfterAnimation 5s infinite;
+    animation:bottomAfterAnimation 5s infinite;
+}
+@keyframes bottomAfterAnimation {
+    0% {opacity:0;height:0;border:0;}
+    25% {opacity:0;height:0;border:0;}
+    26% {opacity:1;height:0;border:0;}
+    26% {opacity:1;height:0;border:2;}
+    28% {opacity:1;height:0;border-top-width:16px;}
+    28% {opacity:1;height:40px;border-top-width:16px;border-bottom-width:14px;}
+    95% {opacity:1;height:40px;border-top-width:16px;border-bottom0width:14px;}
+    100% {opacity:1;height:40px;border:0;}
+}
+
+/*整体加入旋转动画*/
+.flat-anim {
+    -webkit-animation: flatAnimation 5s infinite;
+    animation: flatAnimation 5s infinite;
+}
+@keyframes flatAnimation {
+    0% {-webkit-transform:rotate(50deg) scale(0.5);transform:rotate(50deg) scale(0.5);}
+    13% {-webkit-transform:rotate(360deg) scale(1.2);transform:rotate(360deg) scale(1.2);}
+    20% {-webkit-transform:rotate(360deg) scale(1);transform:rotate(360deg) scale(1);}
+    95% {-webkit-transform:rotate(360deg) scale(1);transform:rotate(360deg) scale(1);}
+    100% {-webkit-transform:rotate(410deg) scale(0.5);transform:rotate(410deg) scale(0.5);}
 }
