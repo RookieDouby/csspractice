@@ -1,0 +1,84 @@
+*{box-sizing: border-box;border-radius:0px 0px 30px 30px;}
+/*flex frame*/
+body{
+    margin:0;
+    display: flex;
+    align-items:center;/*vertical center*/
+    justify-content:center;/*horizontal center*/
+    height:100vh;/*body height consistent with the document height*/
+    /*background: #343C4C;*/
+}
+
+.loader {
+    width:50px;
+    height:50px;
+    position: relative;
+    -webkit-animation:loader 2s ease-in-out infinite;
+    animation: loader 2s ease-in-out infinite;
+}
+.loader span {
+    width:50px;
+    height:50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 4px solid #343C4C;
+}
+.loader::before{
+    content:"";
+    display: block;
+    background: #282e3a;
+    width:30px;
+    height:30px;
+    margin:10px auto;
+    border-radius: 30px;
+    -webkit-animation:beforeAnimation 2s infinite;
+    animation:beforeAnimation 2s infinite;
+}
+.loader span:nth-child(1) {
+    -webkit-animation:span-1 2s ease-in-out infinite;
+    animation:span-1 2s ease-in-out infinite;
+}
+.loader span:nth-child(2) {
+    -webkit-animation:span-2 2s ease-in-out infinite;
+    animation:span-2 2s ease-in-out infinite;
+}
+.loader span:nth-child(3) {
+    -webkit-animation:span-3 2s ease-in-out infinite;
+    animation:span-3 2s ease-in-out infinite;
+}
+.loader span:nth-child(4) {
+    -webkit-animation:span-4 2s ease-in-out infinite;
+    animation:span-4 2s ease-in-out infinite;
+}
+/*Animation Section*/
+@keyframes span-1 {
+    0%{transform:translate(0)}
+    50%{transform:translate(-50px,0);border-color:#EE4D68;}
+    100%{transform:translate(0)}
+}
+@keyframes span-2 {
+    0%{transform:translate(0)}
+    50%{transform:translate(50px,0);border-color:#876578;}
+    100%{transform:translate(0)}
+}
+@keyframes span-3 {
+    0%{transform:translate(0)}
+    50%{transform:translate(0,50px);border-color:#28BA99;}
+    100%{transform:translate(0)}
+}
+@keyframes span-4 {
+    0%{transform:translate(0)}
+    50%{transform:translate(0,-50px);border-color:#DFCB38;}
+    100%{transform:translate(0)}
+}
+@keyframes loader {
+    0% {transform:rotate(-45deg);}
+    30% {transform:rotate(145deg);}
+    100% {transform:rotate(-45deg);}
+}
+@keyframes beforeAnimation {
+    0%{background:skyblue;}
+    50%{background:tomato;}
+    100%{background:skyblue;}
+}
