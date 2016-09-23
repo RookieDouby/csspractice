@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* line 9, ../sass/navbar.scss */
+.menu-item {
+  background: #ff4081;
+  border-radius: 5%;
+  width: 72px;
+  height: 72px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  line-height: 80px;
+  transform: translate3d(0, 0, 0);
+  transition: transform ease-out 200ms;
+  left: 0;
+}
+
+/* line 26, ../sass/navbar.scss */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: #3f51b5;
+}
+
+/* line 36, ../sass/navbar.scss */
+.open-menu {
+  display: none;
+}
+
+/*调用%ball的样式*/
+/* line 43, ../sass/navbar.scss */
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5px;
+  margin-top: -1.5px;
+  transition: transform 200ms;
+}
+
+/* line 58, ../sass/navbar.scss */
+.hamburger-1 {
+  transform: translate3d(0, -8px, 0);
+}
+
+/* line 61, ../sass/navbar.scss */
+.hamburger-2 {
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 64, ../sass/navbar.scss */
+.hamburger-3 {
+  transform: translate3d(0, 8px, 0);
+}
+
+/*hamburger的3条线变成X的东湖，上下两条线旋转，中间一条线x轴变为0.1*/
+/* line 69, ../sass/navbar.scss */
+.menu-open:checked + .menu-open-button .hamburger-1 {
+  transform: translate3d(0, 0, 0) rotate(45deg);
+}
+/* line 72, ../sass/navbar.scss */
+.menu-open:checked + .menu-open-button .hamburger-2 {
+  transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+/* line 75, ../sass/navbar.scss */
+.menu-open:checked + .menu-open-button .hamburger-3 {
+  transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+/* line 80, ../sass/navbar.scss */
+.menu {
+  position: absolute;
+}
