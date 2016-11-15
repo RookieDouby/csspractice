@@ -1,14 +1,13 @@
-@charset "UTF-8";
-/* line 9, ../sass/navbar.scss */
+/* line 10, ../sass/navbar.scss */
 .menu-item {
   background: #ff4081;
-  border-radius: 5%;
+  border-radius: 5% 5% 5%  5%;
   width: 72px;
   height: 72px;
   justify-content: center;
   align-items: center;
   position: absolute;
-  color: #fff;
+  color: white;
   text-align: center;
   line-height: 80px;
   transform: translate3d(0, 0, 0);
@@ -16,29 +15,27 @@
   left: 0;
 }
 
-/* line 26, ../sass/navbar.scss */
+/* line 27, ../sass/navbar.scss */
 body {
   margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
   background: #3f51b5;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  align-items: center;
 }
 
 /* line 36, ../sass/navbar.scss */
-.open-menu {
+.menu-open {
   display: none;
 }
 
-/*调用%ball的样式*/
 /* line 43, ../sass/navbar.scss */
 .hamburger {
   width: 25px;
   height: 3px;
-  background: #fff;
+  background: white;
   display: block;
   position: absolute;
   top: 50%;
@@ -63,7 +60,6 @@ body {
   transform: translate3d(0, 8px, 0);
 }
 
-/*hamburger的3条线变成X的东湖，上下两条线旋转，中间一条线x轴变为0.1*/
 /* line 69, ../sass/navbar.scss */
 .menu-open:checked + .menu-open-button .hamburger-1 {
   transform: translate3d(0, 0, 0) rotate(45deg);
@@ -75,9 +71,4 @@ body {
 /* line 75, ../sass/navbar.scss */
 .menu-open:checked + .menu-open-button .hamburger-3 {
   transform: translate3d(0, 0, 0) rotate(-45deg);
-}
-
-/* line 80, ../sass/navbar.scss */
-.menu {
-  position: absolute;
 }
