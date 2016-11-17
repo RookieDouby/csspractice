@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flag"></div>
+    <div class="doubletriangle"></div>
+    
+    <div class="arrow-wrapper"><div class="arrow"></div></div>
+    <div class="bubble"><span class="text">Content Text</span></div>
+    <style>
+        /*1. flag*/
+        .flag {
+            width:0;
+            height:0;
+            border:2rem solid #FF6600;
+            border-top-width: 4rem;
+            border-bottom-width:2rem;
+            border-bottom-color: transparent;
+        }
+        /*2.double triangle*/
+        .doubletriangle {
+            position:relative;
+            width: 0;
+            height:0;
+            border:2rem solid transparent;
+            border-left:1.8rem solid mediumpurple;
+        }
+        .doubletriangle:after {
+            content: '';
+            display:block;
+            position:absolute;
+            top:-2rem;
+            width:0;
+            height:0;
+            border:2rem solid transparent;
+            border-left:1.8rem solid mediumpurple;
+        }
+
+        /*3.another way to make a double triangles*/
+        .arrow-wrapper {
+            position:relative;
+            width:20em;
+            text-align:center;
+        }
+        .arrow,
+        .arrow:after {
+            display:inline-block;
+            position:relative;
+            width:0;
+            height:0;
+            border-top:1rem solid transparent;
+            border-left: 2rem solid lightblue;
+            border-bottom: 1rem solid transparent;
+            border-right: 2rem solid transparent;
+        }
+        .arrow {
+            margin-left: 1rem;
+        }
+        .arrow:after {
+            content: '';
+            position:absolute;
+            left:100%;
+            top: -1rem;
+            bottom:0;
+        }
+
+        /*4.Bubble*/
+        .bubble {
+            position: relative;
+            margin-left:5rem;
+            background-color:#33AAEE;
+            width:10rem;
+            height:3rem;
+            line-height:3rem;
+            font-size:1rem;
+            color:#fff;
+            text-align:center;
+        }
+        .bubble:before {
+            content:'';
+            position:absolute;
+            left:-1.5rem;
+            top:0.8rem;
+            width:0;
+            height:0;
+            border:0.8rem solid #33AAEE;
+            border-left:0.8rem solid transparent;
+            border-bottom:0.8rem solid transparent;
+            border-top:0.8rem solid transparent;
+        }
+    </style>
+    
+</body>
+</html>
