@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search made by Css3</title>
+    <style>
+        .circle {
+            width:50px;
+            height:50px;
+            border-radius: 50px;
+            border:5px solid  #333;
+            position:relative;
+        }
+        .circle::after {
+            content: '';
+            display: block;
+            position:absolute;
+            width:8px;
+            height:60px;
+            background-color:#333;
+            right:-22px;
+            bottom: -48px;
+            transform: rotate(-45deg);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>

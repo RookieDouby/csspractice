@@ -10,6 +10,9 @@
     
     <div class="arrow-wrapper"><div class="arrow"></div></div>
     <div class="bubble"><span class="text">Content Text</span></div>
+    <div class="ribbon">
+        <span class="ribbon-content">Ribbon Demo</span>
+    </div>
     <style>
         /*1. flag*/
         .flag {
@@ -90,6 +93,60 @@
             border-left:0.8rem solid transparent;
             border-bottom:0.8rem solid transparent;
             border-top:0.8rem solid transparent;
+        }
+
+        /*5.Ribbon demo*/
+        /*main rectangle*/
+        .ribbon {
+            position:relative;
+            width: 10rem;
+            height:3rem;
+            padding: 0.7rem 0;
+            font-size:1.6rem !important;
+            color: #fff;
+            text-align: center;
+            background:#ff0066;
+            margin-left: 10%;
+        }
+        /*left right content*/
+        .ribbon:before,
+        .ribbon:after {
+            content: "";
+            position: absolute;
+            display: block;
+            border:1.5rem solid #ff0066;
+            z-index: -1;
+            bottom: -0.6rem;
+        }
+        .ribbon:before {
+            left: -2.4rem;
+            border-right-width: 1.5rem;
+            border-left-color: transparent;
+            box-shadow: 1px 1px 0px rgba(176,102,166,0.8)
+        }
+        .ribbon:after {
+            right: -2.4rem;
+            border-left-width: 1.5rem;
+            border-right-color: transparent;
+            box-shadow: 0px 1px 0px rgba(176,102,166,0.8);
+        }
+        /*ribon-shadow*/
+        .ribbon .ribbon-content:before,
+        .ribbon .ribbon-content:after {
+            content: "";
+            position:absolute;
+            display:block;
+            border-style: solid;
+            border-color: #bf004c transparent transparent transparent;
+            bottom: -0.6rem;
+        }
+        .ribbon .ribbon-content:before {
+            left: 0;
+            border-width: 0.6rem 0 0 0.6rem;
+        }
+        .ribbon .ribbon-content:after {
+            right: 0;
+            border-width: 0.6rem 0.6rem 0 0;
         }
     </style>
     
