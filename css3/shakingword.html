@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition 抖动的字</title>
+    <style>
+        #box {
+            width:200px;
+            height:100px;
+            background-color: red;
+            font-size: 20px;
+            color:#fff;
+        }
+        #box span {
+            position:relative;
+            /*animation: .2s move linear infinite alternate;*/
+        }
+        
+        @keyframes move {
+            0%{
+                top:0;
+            }
+            100%{
+                top: 10px;
+            }
+        }
+        @-webkit-keyframes move {
+            0%{
+               top:0;
+            }
+            100%{
+                top:10px;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var span = document.getElementsByTagName('span');
+            for(var i = 0;i < span.length; i++) {
+                span[i].style.WebkitAnimation = span[i].style.animation = '.2s ' + (i*50) + 'ms move linear infinite alternate';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <span>L</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+    </div>
+</body>
+</html>
