@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Radar Canvas</title>
+        <script type="text/javascript">
+            function pig(id) {
+                var canvas = document.getElementById(id);
+                if(canvas.getContext) {
+                    var ctx = canvas.getContext('2d');
+                    ctx.strokeStyle = "#FFCCCC";
+                    var circle = {
+                        x: 200,
+                        y: 200,
+                        r: 20 //radius of the smallest circle
+                    };
+                    //draw five circles
+                    ctx.beginPath();
+                    ctx.arc(circle.x, circle.y, circle.r, 0, 2*Math.PI);
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.arc(circle.x, circle.y, circle.r+20, 0, 2*Math.PI);
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.arc(circle.x, circle.y, circle.r+40, 0, 2*Math.PI);
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.arc(circle.x, circle.y, circle.r+60, 0, 2*Math.PI);
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.arc(circle.x, circle.y, circle.r+80, 0, 2*Math.PI);
+                    ctx.stroke();
+                    //draw cross
+                    var beginPoint = 200 - Math.sqrt(100*100/2);
+                    ctx.beginPath();
+                    ctx.moveTo(beginPoint,beginPoint);
+                    var endPoint = 200 + Math.sqrt(100*100/2);
+                    ctx.lineTo(endPoint,endPoint);
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.moveTo(beginPoint,endPoint);
+                    ctx.lineTo(endPoint,beginPoint);
+                    ctx.stroke();
+
+                    //draw flod line
+                    ctx.stroleStyle = "rgb(250, 0, 0)";
+                    beginPoint = 200 - Math.sqrt(100*100/2);
+                    ctx.beginPath();
+                    ctx.moveTo(beginPoint,beginPoint);
+                    beginPoint = 200 - Math.sqrt(80*80/2);
+                    endPoint = 200 + Math.sqrt(80 * 80/2);
+                    ctx.lineTo(beginPoint, endPoint);
+                    ctx.stroke();
+
+                }
+            }
+            window.onload = function() {
+                pig('radar');
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="radar" style="background:#FFC" width="400" height="400"></canvas>
+    </body>
+</html>

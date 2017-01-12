@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart</title>
+    <style>
+        * {margin:0; padding:0}
+        .heart {
+            width:200px;
+            height: 300px;
+            margin:100px auto;
+            position:relative;
+        }
+        .heart:before, .heart:after {
+            content: "You";
+            position: absolute;
+            height: 100%;
+            width:100%;
+            background-color: #ccc;
+            border-radius: 100px 100px 0 0;
+            line-height: 150px;
+            text-align: center;
+            color: yellow;
+            font-size:24px;
+        }
+        .heart:before {
+            transform: rotate(-45deg);
+        }
+        .heart:after {
+            transform: rotate(45deg);
+            left: 72px;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>

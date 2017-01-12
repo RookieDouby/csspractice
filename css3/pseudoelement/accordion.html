@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion with Css3</title>
+    <style>
+        *{margin:0; padding:0;}
+        .items {width:500px;margin: 50px auto;}
+        .item h4{
+            height: 40px;
+            line-height:40px;
+            padding-left: 35px;
+            background-color: chocolate;
+            border-bottom: 2px solid #00021c;
+        }
+        .item p {
+            background-color: darkkhaki;
+            height:0;
+            transition: all 1s;
+        }
+        .item:hover p {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="items">
+        <div class="item">
+            <h4>Item 1</h4>
+            <p></p>
+        </div>
+        <div class="item">
+            <h4>Item 2</h4>
+            <p></p>
+        </div>
+        <div class="item">
+            <h4>Item 3</h4>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>
