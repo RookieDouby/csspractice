@@ -30,7 +30,7 @@
         position: relative;
     }
     /*bottom shadow*/
-    .monitor:before {
+   .monitor:before {
         content: "";
         display: block;
         position: absolute;
@@ -40,20 +40,110 @@
         box-shadow: 0 360px 10px rgba(0,0,0,0.2);
         border-radius: 50%;
     }
-    /*shine */
-    .monitor:after {
-        content: "";
-        display: block;
+      /*shine */
+   .monitor:after {
+       content: "#";
+       display: block;
+       position: absolute;
+       background: -webkit-linear-gradient(top left, rgba(255,255,255,0) 60%,rgba(255,255,255,0.2) 60%,rgba(255,255,255,0) 100%);
+       right: -30px;
+       text-indent: -9999px;
+       top: -30px;
+       height: 364px;
+       width: 600px;
+       z-index: 10px;
+       border-radius: 20px 20px 0 0;
+   }
+    
+    #adidas .canvas {
+        background: #017ac3;
+    }
+    #adidas .icon {
+        left: 230px;
         position: absolute;
-        background: -webkit-linear-gradient(top left, rgba(255,255,255,0) 60%,rgba(255,255,255,0.2) 60%,rgba(255,255,255,0) 100%);
-        right: -30px;
-        text-indent: -99999px;
-        top: -30px;
-        width: 600px;
-        z-index: 10px;
-        border: absolute;
-        border-radius: 20px 20px 0 0;
-
+        top:10px;
+    }
+    #adidas .leaf-t1,
+    #adidas .leaf-t2 {
+        background: #fff;
+        border-radius: 204px/280px;
+        clip:rect(18px 43px 255px 0px);
+        height: 280px;
+        position:absolute;
+        top: -36px;
+        width: 194px;
+    }
+    #adidas .leaf-t2 {
+        position: absolute;
+        left: -109px;
+        transform: rotate(180deg);
+    }
+    #adidas .leaf1 .leaf-t1,
+    #adidas .leaf1 .leaf-t2 {
+        height: 250px;
+    }
+    #adidas .leaf2 .leaf-t1,
+    #adidas .leaf2 .leaf-t2,
+    #adidas .leaf3 .leaf-t1,
+    #adidas .leaf3 .leaf-t2 {
+        clip: rect(20px 38px 220px 0px);
+        height: 240px;
+    }
+    #adidas .leaf1 {
+        position: absolute;
+        top: 50px;
+    }
+    #adidas .leaf2 {
+        left: -130px;
+        position: absolute;
+        top: 131px;
+        transform: rotate(-40deg);
+    }
+    #adidas .leaf2 .leaf-t1,
+    #adidas .leaf2 .leaf-t2{
+        border-radius: 200px/287px;
+        width: 200px;
+    }
+    #adidas .leaf2 .leaf-t1 {
+        left: 5px;
+    }
+    #adidas .leaf2 .leaf-t2 {
+        left: -120px;
+    }
+    #adidas .leaf3 {
+        left: 151px;
+        position:absolute;
+        top: 77px;
+        transform: rotate(40deg);
+    }
+    #adidas .leaf3 .leaf-t1,
+    #adidas .leaf3 .leaf-t2 {
+        border-radius: 200px/287px;
+        width: 200px;
+    }
+    #adidas .leaf3 .leaf-t1 {
+        left: 4px;
+    }
+    #adidas .leaf3 .leaf-t2 {
+        left: -121px;
+    }
+    /*stripes*/
+    #adidas .stripes {
+        height:50px;
+        left: -19px;
+        position:absolute;
+        top: 160px;
+        width: 110px;
+        z-index: 10;
+    }
+    #adidas .stripe {
+        background:#017ac3;
+        height: 12px;
+        left: -98px;
+        margin-bottom: 12px;
+        position:relative;
+        top: 0px;
+        width: 320px;
     }
 </style>
 </head>

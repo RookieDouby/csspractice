@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Windmill Demo</title>
+    <style>
+        .test {
+              width: 5px;
+              height: 0px;
+              border-style: solid;
+              border-width: 0px 2px 60px 2px;
+              border-color: transparent transparent #abc transparent;
+        }
+        body{background: #a5cad6;}
+        h1 {
+            text-align: center;
+            font-size: 12px;
+            margin: 50px auto;
+        }
+        .windmill {
+            display: block;
+            position: relative;
+            margin: 50px auto;
+            width:100px;
+            height:120px;
+        }
+        .windmill .pillar {
+            height: 0px;
+            width: 4px;
+            border-width: 0 4px 80px 4px;
+            border-style: none solid solid;
+            border-color: transparent transparent white transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -2px;
+            margin-top: -40px;
+        }
+        .windmill .axis {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            top: 10px;
+            left: 49px;
+            -webkit-transition-property: -webkit-transform;
+            -webkit-transition-duration: 1s;
+            transition-property: transform;
+            transition-duration: 1s;
+            -webkit-animation: rotate 4s linear infinite;
+            animation: rotate 4s linear infinite;
+        }
+        .windmill .wing {
+            position: absolute;
+            top: 1px;
+            left: -2px;
+            display: block;
+            height: 0px;
+            width: 2px;
+            border-width: 50px 2px 0px 2px;
+            border-style: solid solid none;
+            border-color: #fff transparent transparent;
+            box-shadow: 1px 1px 1px rgba(105,97,97,0.1);
+            -webkit-transform-origin: 0px 0px;
+            -webkit-transform: rotate(60deg);
+            -moz-transform-origin: 0px 0px;
+            -moz-transform: rotate(60deg);
+            transform-origin: 0px 0px;
+            transform: rotate(60deg);
+        }
+        .windmill .wing2 {
+            position: absolute;
+            top: -3px;
+            left: 5px;
+            display: block;
+            width: 2px;
+            height: 0px;
+            border-style: solid solid none;
+            border-width: 50px 2px 0px 2px;
+            border-color: #fff transparent transparent transparent;
+            -webkit-transform-origin:0px 0px;
+            -webkit-transform:rotate(180deg);
+            transform-origin: 0px 0px;
+            transform: rotate(180deg);
+        }
+        .windmill .wing3 {
+            position: absolute;
+            top: 6px;
+            left: 5px;
+            display: block;
+            width: 2px;
+            height: 0px;
+            border-style: solid solid none;
+            border-width: 50px 2px 0px 2px;
+            border-color: #fff transparent transparent transparent;
+            -webkit-transform-origin:0px 0px;
+            -webkit-transform:rotate(300deg);
+            transform-origin: 0px 0px;
+            transform: rotate(300deg);
+        }
+        .windmill .axis:hover {
+            -webkit-animation: rotate2 0.3s linear infinite;
+            animation: rotate2 0.3s linear infinite;
+        }
+
+        @-webkit-keyframes rotate {
+            from{-webkit-transform: rotate(0deg)}to{-webkit-transform: rotate(360deg)}
+        }
+        @-moz-keyframes rotate {
+            from{-moz-transform: rotate(0deg)}to{-moz-transform: rotate(360deg)}
+        }
+        @keyframes rotate {
+            from{transform: rotate(0deg)}to{transform: rotate(360deg)}
+        }
+
+        @-webkit-keyframes rotate2 {
+            from{-webkit-transform: rotate(0deg)}to{-webkit-transform: rotate(360deg)}
+        }
+        @-moz-keyframes rotate2 {
+            from{-moz-transform: rotate(0deg)}to{-moz-transform: rotate(360deg)}
+        }
+        @keyframes rotate2 {
+            from{transform: rotate(0deg)}to{transform: rotate(360deg)}
+        }
+    </style>
+</head>
+<body>
+    <h1>Windmill will rotate when hove</h1>
+    <span class="windmill">
+        <span class="pillar"></span>
+        <span class="axis">
+            <span class="wing"></span>
+            <span class="wing2"></span>
+            <span class="wing3"></span>
+        </span>
+    </span>
+    <span class="test"></span>
+</body>
+</html>
